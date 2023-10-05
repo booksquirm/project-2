@@ -94,16 +94,25 @@ h1 {
     padding: 6px;
     cursor: url(https://i.ibb.co/nR7TSY2/icons8-ghost-25.png) 10 10, auto;
     transition: background-color 0.6s ease-in-out;
+  }
 
-    &:hover {
+    button:hover {
       background-color: #aa6520;
     }
-  }
 
   /*Posts*/
 
+  .post-costumes, .post-decorations, .post-recipes {
+    background-image: url(https://images.fineartamerica.com/images-medium-large-5/bats-flying-against-night-sky-pantanal-konrad-wothe.jpg);
+    color: #f5f5f5;
+    margin: 5px;
+    padding: 5px;
+  }
 
-  
+  h2 {
+    color: #dea872;
+  }
+
   /*Footer*/
 
   footer {
@@ -147,14 +156,23 @@ h1 {
       .posts {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: auto auto auto;
-        grid-gap: 10px;
       }
       
-      .post-costumes li,
-      .post-decorations li,
-      .post-recipes li {
-        grid-column: 1 / 4;
-        grid-row: auto;
+      .post-costumes {
+        grid-column: 1;
+        margin: 10px;
+        padding: 10px;
+      }
+
+      .post-decorations {
+        grid-column: 2;
+        margin: 10px;
+        padding: 10px;
+      }
+
+      .post-recipes {
+        grid-column: 3;
+        margin: 10px;
+        padding: 10px;
       }
     }
