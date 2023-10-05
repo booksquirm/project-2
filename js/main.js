@@ -19,10 +19,10 @@ const images = [
   'halloween-image12.jpg',
 ];
 
-// Starting with the current image 1 (also known as 0).
+// Start with image 1 (which is at index 0).
 let currentImageIndex = 0;
 
-// Showing the current image.
+// Displays the current image and hide all other images.
 function displayCurrentImage() {
   carouselInner.children[currentImageIndex].style.display = 'block';
   for (let i = 0; i < carouselInner.children.length; i++) {
@@ -35,7 +35,7 @@ function displayCurrentImage() {
 // Shows the current image on page load.
 displayCurrentImage();
 
-// Listener events for button clicks.
+// Listener event for button clicks for displaying previous image.
 carouselPrev.addEventListener('click', function() {
   currentImageIndex--;
   if (currentImageIndex < 0) {
@@ -44,6 +44,7 @@ carouselPrev.addEventListener('click', function() {
   displayCurrentImage();
 });
 
+// Listener event for button clicks for displaying next image.
 carouselNext.addEventListener('click', function() {
   currentImageIndex++;
   if (currentImageIndex >= images.length) {

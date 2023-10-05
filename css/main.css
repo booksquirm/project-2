@@ -19,13 +19,115 @@ h1 {
   font-size:xx-large;
 }
 
-  /*Navigation*/
+/*Navigation*/
 
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 3px;
+  background-color: #f5f5f5;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 1rem;
+  height:auto;
+  width:200px;
+}
+
+.nav-links {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  cursor: url(https://i.ibb.co/R789t6v/icons8-witch-24.png) 10 10, auto;
+}
+
+.nav-links a:hover {
+  color: #dea872;
+  text-decoration: underline;
+}
+
+/*Image Carousel*/
+
+img {
+  display: block;
+  height:auto;
+  width: 100%;
+}
+
+.slides {
+  width:400px;
+  margin:auto;
+}
+
+.carousel-controls {
+display: flex;
+align-items: center;
+justify-content: space-between;
+flex-direction: row;
+}
+
+button {
+background-color: #dea872;
+border-radius: 15%;
+border: none;
+color: black;
+font-family: 'Quicksand', sans-serif;
+font-size: 13px;
+padding: 6px;
+cursor: url(https://i.ibb.co/nR7TSY2/icons8-ghost-25.png) 10 10, auto;
+transition: background-color 0.6s ease-in-out;
+}
+
+button:hover {
+  background-color: #aa6520;
+}
+
+/*Posts*/
+
+.post-costumes, .post-decorations, .post-recipes {
+background-image: url(https://images.fineartamerica.com/images-medium-large-5/bats-flying-against-night-sky-pantanal-konrad-wothe.jpg);
+color: #f5f5f5;
+margin: 5px;
+padding: 5px;
+}
+
+h2 {
+color: #dea872;
+}
+
+/*Footer*/
+
+footer {
+background-color: #dea872;
+font-size: 12px;
+padding: 15px;
+}
+
+/*Media Queries*/
+@media (min-width: 800px) {
   header {
     display: flex;
-    flex-direction: row;
+    align-items: center;
     justify-content: space-between;
-    padding: 3px;
+    padding: 5px;
     background-color: #f5f5f5;
   }
   
@@ -37,142 +139,40 @@ h1 {
   .logo {
     margin-right: 1rem;
     height:auto;
-    width:200px;
+    width:150px;
   }
-  
+
   .nav-links {
     list-style: none;
     margin: 0;
     display: flex;
-    flex-direction: column;
-    padding: 5px;
-  }
-  
-  .nav-links li {
-    display: inline-block;
-    margin-right: 1rem;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: black;
-    cursor: url(https://i.ibb.co/R789t6v/icons8-witch-24.png) 10 10, auto;
-  }
-  
-  .nav-links a:hover {
-    color: #dea872;
-    text-decoration: underline;
-  }
-  
-    /*Image Carousel*/
-
-    img {
-      display: block;
-      height:auto;
-      width: 100%;
-    }
-    
-    .slides {
-      width:400px;
-      margin:auto;
-    }
-
-  .carousel-controls {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     flex-direction: row;
   }
 
-  button {
-    background-color: #dea872;
-    border-radius: 15%;
-    border: none;
-    color: black;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 13px;
-    padding: 6px;
-    cursor: url(https://i.ibb.co/nR7TSY2/icons8-ghost-25.png) 10 10, auto;
-    transition: background-color 0.6s ease-in-out;
+  h1 {
+    font-size: xxx-large;
   }
 
-    button:hover {
-      background-color: #aa6520;
-    }
-
-  /*Posts*/
-
-  .post-costumes, .post-decorations, .post-recipes {
-    background-image: url(https://images.fineartamerica.com/images-medium-large-5/bats-flying-against-night-sky-pantanal-konrad-wothe.jpg);
-    color: #f5f5f5;
-    margin: 5px;
-    padding: 5px;
+  .posts {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .post-costumes {
+    grid-column: 1;
+    margin: 10px;
+    padding: 10px;
   }
 
-  h2 {
-    color: #dea872;
+  .post-decorations {
+    grid-column: 2;
+    margin: 10px;
+    padding: 10px;
   }
 
-  /*Footer*/
-
-  footer {
-    background-color: #dea872;
-    font-size: 12px;
-    padding: 15px;
+  .post-recipes {
+    grid-column: 3;
+    margin: 10px;
+    padding: 10px;
   }
-
-    /*Media Queries*/
-    @media (min-width: 800px) {
-      header {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 5px;
-        background-color: #f5f5f5;
-      }
-      
-      nav {
-        display: flex;
-        align-items: center;
-      }
-      
-      .logo {
-        margin-right: 1rem;
-        height:auto;
-        width:150px;
-      }
-
-      .nav-links {
-        list-style: none;
-        margin: 0;
-        display: flex;
-        flex-direction: row;
-      }
-
-      h1 {
-        font-size: xxx-large;
-      }
-
-      .posts {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-      }
-      
-      .post-costumes {
-        grid-column: 1;
-        margin: 10px;
-        padding: 10px;
-      }
-
-      .post-decorations {
-        grid-column: 2;
-        margin: 10px;
-        padding: 10px;
-      }
-
-      .post-recipes {
-        grid-column: 3;
-        margin: 10px;
-        padding: 10px;
-      }
-    }
+}
