@@ -14,7 +14,7 @@ body {
     padding: 0;
   }
 
-h1, h2 {
+h1 {
   font-family: 'Creepster', display;
   font-size:xx-large;
 }
@@ -56,50 +56,60 @@ h1, h2 {
   .nav-links a {
     text-decoration: none;
     color: black;
+    cursor: url(https://i.ibb.co/R789t6v/icons8-witch-24.png) 10 10, auto;
   }
   
   .nav-links a:hover {
     color: #dea872;
     text-decoration: underline;
   }
+  
+    /*Image Carousel*/
+
+    img {
+      display: block;
+      height:auto;
+      width: 100%;
+    }
+    
+    .slides {
+      width:400px;
+      margin:auto;
+    }
+
+  .carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  button {
+    background-color: #dea872;
+    border-radius: 15%;
+    border: none;
+    color: black;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 13px;
+    padding: 6px;
+    cursor: url(https://i.ibb.co/nR7TSY2/icons8-ghost-25.png) 10 10, auto;
+    transition: background-color 0.6s ease-in-out;
+
+    &:hover {
+      background-color: #aa6520;
+    }
+  }
 
   /*Posts*/
 
-  .halloween-post {
-    margin-bottom: 10px;
-  }
-  
-  .halloween-post h2 {
-    font-size: 20px;
-  }
-  
-  .halloween-post p {
-    font-size: 16px;
-  }
 
+  
   /*Footer*/
 
   footer {
     background-color: #dea872;
-    color: white;
     font-size: 12px;
-    padding: 20px;
-  }
-
-    /*Image Carousel*/
-
-  img {
-    display: block;
-    height:auto;
-    width: 80%;
-  }
-  
-  .slides {
-    width:400px;
-    margin:auto;
-  }
-  .carousel-control-next {
-    float:right;
+    padding: 15px;
   }
 
     /*Media Queries*/
@@ -130,7 +140,21 @@ h1, h2 {
         flex-direction: row;
       }
 
-      h1 h2 {
+      h1 {
         font-size: xxx-large;
+      }
+
+      .posts {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto auto auto;
+        grid-gap: 10px;
+      }
+      
+      .post-costumes li,
+      .post-decorations li,
+      .post-recipes li {
+        grid-column: 1 / 4;
+        grid-row: auto;
       }
     }

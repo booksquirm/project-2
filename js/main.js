@@ -52,7 +52,7 @@ carouselNext.addEventListener('click', function() {
   displayCurrentImage();
 });
 
-// Cursor
+// Pumpkin Cursor
 document.addEventListener("mousemove", function(event) {
   var cursor = document.querySelector(".cursor");
   cursor.style.left = event.clientX + "px";
